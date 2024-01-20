@@ -16,7 +16,7 @@ from aiogram.client.bot import Bot
 
 from icecream import ic
 
-from settings import get_bot_token
+from settings import BOT_TOKEN
 from state_machine import Form
 from database import db
 from messages import messages
@@ -30,7 +30,8 @@ form_router = Router()
 message_router = Router()
 callback_router = Router()
 
-bot = Bot(get_bot_token(), parse_mode=ParseMode.HTML)
+
+bot = Bot(BOT_TOKEN, parse_mode=ParseMode.HTML)
 dp = Dispatcher(storage=MemoryStorage())
 dp.include_routers(form_router, callback_router, message_router)
 

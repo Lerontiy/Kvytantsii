@@ -1,2 +1,7 @@
-def get_bot_token():
-    return "6928405214:AAHg1wRANrTwAdjdETQFuesXa4MR8dlgVyw"
+import os
+from dotenv import load_dotenv
+from icecream import ic
+
+ic(load_dotenv(".env.env"))
+
+BOT_TOKEN:str = os.environ.get("BOT_TOKEN")
