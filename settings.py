@@ -2,6 +2,6 @@ import os
 from dotenv import load_dotenv
 from icecream import ic
 
-ic(load_dotenv(".env.env"))
+ic(load_dotenv(".env"))
 
 BOT_TOKEN:str = os.environ.get("BOT_TOKEN")
